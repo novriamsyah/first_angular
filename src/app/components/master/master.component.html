@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" (click)="changeTabValue('Roles')" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Roles</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (click)="changeTabValue('Designation')">
+            <label class="btn btn-outline-primary" for="btnradio2">Designation</label>
+          </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12" *ngIf="currentComponent == 'Roles'">
+            <app-roles></app-roles>
+        </div>
+        <div class="col-12" *ngIf="currentComponent == 'Designation'">
+            <app-designation></app-designation>
+        </div>
+    </div>
+</div>
