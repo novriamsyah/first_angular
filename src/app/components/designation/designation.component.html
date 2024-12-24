@@ -1,7 +1,20 @@
 <div class="container shadow my-5 p-5 border">
-    <div class="d-flex justify-content-center align-items-center">
-
-        <h1>Designation</h1>
-
-    </div>
+  <div class="d-flex justify-content-center align-items-center mb-4">
+    <h1>Designation</h1>
+  </div>
+  <div class="row">
+    @for (item of designationList; track $index) {
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">{{item.designation}}</h5>
+                <p class="card-text">
+                    role : User
+                </p>
+                <a href="javascript:void(0)"  class="btn btn-success">Detail</a>
+                </div>
+            </div>
+        </div>
+    }
+  </div>
 </div>
