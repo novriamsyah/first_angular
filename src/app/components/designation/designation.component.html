@@ -3,18 +3,45 @@
     <h1>Designation</h1>
   </div>
   <div class="row">
-    @for (item of designationList; track $index) {
-        <div class="col-sm-3">
-            <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">{{item.designation}}</h5>
-                <p class="card-text">
-                    role : User
-                </p>
-                <a href="javascript:void(0)"  class="btn btn-success">Detail</a>
-                </div>
-            </div>
+    @if (isLoader) {
+      <div class="col-12 text-center">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
         </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    } 
+    
+    @for (item of designationList; track $index) {
+      <div class="col-sm-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.designation }}</h5>
+            <p class="card-text">role : User</p>
+            <a href="javascript:void(0)" class="btn btn-success">Detail</a>
+          </div>
+        </div>
+      </div>
     }
   </div>
 </div>
